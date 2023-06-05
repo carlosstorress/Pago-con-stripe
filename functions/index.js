@@ -23,7 +23,6 @@ exports.createStripeCheckout = functions.https.onCall(async (data, context) => {
           type: "custom",
           custom: "Nombre del responsable del pago",
         },
-        numeric: "no",
         type: "text",
         text: {
           maximum_length: 50,
