@@ -13,9 +13,9 @@ exports.createStripeCheckout = functions.https.onCall(async (data, context) => {
 //     shipping_address_collection: {
 //       allowed_countries: ["MX"],
 //     },
-    billingAddressCollection: {
-      required: true,
-    },
+//     billingAddressCollection: {
+//       required: true,
+//     },
     custom_fields: [
       {
         key: "engraving",
