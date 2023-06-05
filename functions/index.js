@@ -15,14 +15,6 @@ exports.createStripeCheckout = functions.https.onCall(async (data, context) => {
 //     },
     billingAddressCollection: {
       required: true,
-      address: {
-        line1: "",
-        line2: "",
-        city: "",
-        state: "",
-        postal_code: "",
-        country: "",
-      },
     },
     custom_fields: [
       {
