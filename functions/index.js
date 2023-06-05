@@ -10,7 +10,10 @@ exports.createStripeCheckout = functions.https.onCall(async (data, context) => {
     mode: "payment",
     success_url: "https://example.com",
     cancel_url: "https://example.com",
-    shipping_address_collection: {
+//     shipping_address_collection: {
+//       allowed_countries: ["MX"],
+//     },
+    billingAddressCollection: {
       allowed_countries: ["MX"],
     },
     custom_fields: [
@@ -71,6 +74,7 @@ exports.stripeWebhook = functions.https.onRequest(async (req, res) => {
     customerDetails: dataObject.customer_details,
     totalDetails: dataObject.total_details,
     customFields: dataObject.custom_fields,
+    billingAddressCollection: dataObject.billingAddressCollection,
     dateTime: fechaActual,
   });
   return res.sendStatus(200);
