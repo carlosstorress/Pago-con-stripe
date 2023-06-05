@@ -14,7 +14,6 @@ exports.createStripeCheckout = functions.https.onCall(async (data, context) => {
 //       allowed_countries: ["MX"],
 //     },
     billingAddressCollection: {
-      allowed_countries: ["MX"],
     },
     custom_fields: [
       {
